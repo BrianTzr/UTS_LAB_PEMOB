@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">UTS</string>
-    <string name="nama_kartu">NamaKartu</string>
-    <string name="Deskripsi">DeskripsiKartu</string>
-    <string name="type">TipeKartu</string>
+    <string name="nama_kartu">Nama Kartu</string>
+    <string name="Deskripsi">Deskripsi Kartu</string>
+    <string name="type">Tipe Kartu</string>
     <string name="Race">Race</string>
     <string name="LinkYGOPro">Link</string>
     <string name="card_image">Card Image</string>
