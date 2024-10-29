@@ -20,6 +20,7 @@
             val apiService = ApiClient.retrofit.create(ApiService::class.java)
             val call = apiService.getAllCardData()
 
+            val context = this
             call.enqueue(object : Callback<ApiResponse> {
                 override fun onResponse(call: Call<ApiResponse>, response: Response<ApiResponse>) {
                     if (response.isSuccessful) {
@@ -27,7 +28,7 @@
                         val cardList = apiResponse?.data ?: emptyList()
 
                         // Set adapter with cardList
-                        recyclerView.adapter = CardAdapter(cardList)
+                        recyclerView.adapter = CardAdapter(context, cardList)
                     } else {
                         Log.e("API Error", "Response error: ${response.message()}")
                     }

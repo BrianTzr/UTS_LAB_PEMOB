@@ -1,5 +1,8 @@
 package com.example.uts
 
+import android.content.Context
+import android.content.Intent
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,7 +11,10 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 
-class CardAdapter(private val cardList: List<CardData>) : RecyclerView.Adapter<CardAdapter.CardViewHolder>() {
+class CardAdapter(
+    private val context: Context,
+    private val cardList: List<CardData>
+) : RecyclerView.Adapter<CardAdapter.CardViewHolder>() {
 
     inner class CardViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val cardImage: ImageView = itemView.findViewById(R.id.cardImage)
@@ -21,6 +27,7 @@ class CardAdapter(private val cardList: List<CardData>) : RecyclerView.Adapter<C
     }
 
     override fun onBindViewHolder(holder: CardViewHolder, position: Int) {
+        Log.d("CardAdapter", "Card: ${cardList[0]}")
         val card = cardList[position]
         holder.cardName.text = card.name
 
@@ -28,6 +35,13 @@ class CardAdapter(private val cardList: List<CardData>) : RecyclerView.Adapter<C
         Glide.with(holder.cardImage.context)
             .load(card.card_images[0].image_url)
             .into(holder.cardImage)
+
+        holder.itemView.setOnClickListener {
+            val intent = Intent(context, DetailActivity::class.java)
+            intent.putExtra("card", card)
+            context.startActivity(intent)
+        }
+
     }
 
     override fun getItemCount() = cardList.size
