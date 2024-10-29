@@ -2,4 +2,7 @@
     <string name="app_name">UTS</string>
     <string name="nama_kartu">NamaKartu</string>
     <string name="Deskripsi">DeskripsiKartu</string>
+    <string name="type">TipeKartu</string>
+    <string name="Race">Race</string>
+    <string name="LinkYGOPro">Link</string>
 </resources>
