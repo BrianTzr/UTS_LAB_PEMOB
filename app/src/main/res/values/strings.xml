@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">UTS</string>
+    <string name="nama_kartu">NamaKartu</string>
+    <string name="Deskripsi">DeskripsiKartu</string>
+</resources>
