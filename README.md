@@ -1,5 +1,7 @@
 Nama   :Brian Abednego Beltasar Silitonga
+
 NIM    :221401088
+
 Lab    :4
 
 # Yu-Gi-Oh Card Info App
