@@ -12,4 +12,5 @@ interface ApiService {
 
     @GET("cardinfo.php?archetype=Blue-Eyes")
     fun getBlueEyes(): Call<ApiResponse>
+
 }
