@@ -1,3 +1,7 @@
+Nama   :Brian Abednego Beltasar Silitonga
+NIM    :221401088
+Lab    :4
+
 # Yu-Gi-Oh Card Info App
 
 Aplikasi ini adalah proyek Android yang menampilkan informasi kartu Yu-Gi-Oh yang diambil dari API. Pengguna dapat menjelajahi berbagai kartu, melihat detailnya, dan menemukan informasi menarik tentang setiap kartu.
